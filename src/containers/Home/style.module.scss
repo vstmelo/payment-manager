@@ -1,0 +1,37 @@
+@import "../../assets/styles/variables";
+
+.container {
+  background-color: $color-fade-gray;
+  height: 100vh;
+  display: flex;
+  
+  
+}
+
+.containerCards {
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  top: 130px;
+
+}
+.containerCards2 {
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 450px;
+  top: 130px;
+
+}
+.containerCards3 {
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 860px;
+  top: 130px;
+
+}
