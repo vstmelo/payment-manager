@@ -1,6 +1,6 @@
 import { Card } from "../../components/Card";
 import { CardData } from "../../components/Card-data";
-import css from './style.module.scss'
+
 export function PaymentLate() {
   const data = [
     {
@@ -41,7 +41,7 @@ export function PaymentLate() {
       <Card title="Cobranças Vencidas" theme="pink" >
         R$: 5k
       </Card>
-      <div className={css.containerWrapper}>
+      <div >
         <p>Cliente</p>
         <p>Id da Cob.</p>
         <p>Valor</p>

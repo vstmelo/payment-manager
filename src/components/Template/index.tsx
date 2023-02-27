@@ -4,15 +4,22 @@ import SideBar from "../../components/SideBar";
 import { ITemplate } from "../../types";
 
 const Template = (props: ITemplate) => {
+  const currentPath = window.location.pathname;
   return (
     <ContainerTemplate>
-      <div>
-        <SideBar />
-      </div>
-      <div>
-        <Header />
-      </div>
-      <div>{props.children}</div>
+      {currentPath === "/" ? (
+        <></>
+      ) : (
+        <>
+          <div>
+            <SideBar />
+          </div>
+          <div>
+            <Header />
+            {props.children}
+          </div>
+        </>
+      )}
     </ContainerTemplate>
   );
 };

@@ -42,7 +42,7 @@ export function PaymentComming(){
         <Card title="Cobranças Previstas " theme="yellow" >
           R$: 5k
         </Card>
-        <div className={css.containerWrapper}>
+        <div >
         <p>Cliente</p>
         <p>Id da Cob.</p>
         <p>Valor</p>

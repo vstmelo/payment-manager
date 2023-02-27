@@ -1,12 +1,9 @@
-import css from './style.module.scss';
+import { ContainerHeader } from "../../assets/styles/components/header";
 
 export function Header(): JSX.Element {
   return (
-    <section className={css.header}>
-       <h1>Resumo das cobranças</h1>
-        {/* <div className='profile-container'>
-            <Profile/>
-          </div> */}
-    </section>
-  )
+    <ContainerHeader>
+      <h1>Resumo das cobranças</h1>
+    </ContainerHeader>
+  );
 }

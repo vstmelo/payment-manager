@@ -1,7 +1,7 @@
+import { ContainerPayment } from "../../assets/styles/components/payment";
 import { Card } from "../../components/Card";
 import { CardData } from "../../components/Card-data";
 import Header from "../../components/SideBar";
-import css from './style.module.scss';
 export function PaymentPaid() {
   const data = [
     {
@@ -38,12 +38,12 @@ export function PaymentPaid() {
     },
   ]
   return (
-    <div >
+    <ContainerPayment >
       <Card title="Cobranças Pagas " theme="blue" >
         R$: 5k
       </Card>
 
-      <div className={css.containerWrapper}>
+      <div>
         <p>Cliente</p>
         <p>Id da Cob.</p>
         <p>Valor</p>
@@ -56,6 +56,6 @@ export function PaymentPaid() {
         }
       </div>
 
-    </div>
+    </ContainerPayment>
   )
 }
