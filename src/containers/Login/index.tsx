@@ -1,12 +1,15 @@
-import css from "./style.module.scss";
 import Input from "../../components/Input";
-import { Button } from "../../components/Button";
 import React, { useContext, useState } from "react";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
 import { SideBar } from "./sidebar";
-// import { Card } from "components/Card";
-
+import {
+  BoxInput,
+  BoxLogin,
+  ButtonLogin,
+  ContainerLogin,
+  TitleLogin,
+} from "../../assets/styles/pages/Login";
 export default function Login(): JSX.Element {
   const [userEmail, setUserEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
@@ -22,7 +25,7 @@ export default function Login(): JSX.Element {
   };
 
   const callLoginUsecase = async (event: any) => {
-    event.preventDefault()
+    event.preventDefault();
     SignIn({ email: userEmail, password: pass, navigate });
   };
 
@@ -32,20 +35,20 @@ export default function Login(): JSX.Element {
 
   return (
     <>
-      <section className={css.container}>
+      <ContainerLogin>
         <SideBar />
-        <div className={css.box}>
-          <h3 className={css.loginText}>Login</h3>
-          <div className={css.boxInputs}>
+        <BoxLogin>
+          <TitleLogin>Login</TitleLogin>
+          <BoxInput>
             <Input
               type="text"
               placeholder="Digite seu email"
               fullwidth="true"
-              label="Email :"
+              label="Email:"
               onChange={handleUserEmail}
             />
-          </div>
-          <div className={css.boxInputs}>
+          </BoxInput>
+          <BoxInput>
             <Input
               label="Senha:"
               placeholder="Digite sua senha"
@@ -53,20 +56,12 @@ export default function Login(): JSX.Element {
               type="password"
               onChange={handlePass}
             />
-          </div>
-          <div className={css.buttonContainer}>
-            <Button
-              fullwidth="true"
-              onClick={callLoginUsecase}
-              theme="secondary"
-              size="small"
-              className={css.backBtn}
-            >
-              Entrar
-            </Button>
-          </div>
-        </div>
-      </section>
+          </BoxInput>
+          <ButtonLogin onClick={callLoginUsecase} type="submit">
+            Entrar
+          </ButtonLogin>
+        </BoxLogin>
+      </ContainerLogin>
     </>
   );
 }

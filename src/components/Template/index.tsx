@@ -1,4 +1,4 @@
-import ContainerTemplate from "../../assets/styles/components/template/container";
+import ContainerTemplate from "../../assets/styles/components/template";
 import { Header } from "../../components/Header";
 import SideBar from "../../components/SideBar";
 import { ITemplate } from "../../types";
