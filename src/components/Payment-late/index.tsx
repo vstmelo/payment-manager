@@ -41,13 +41,11 @@ export function PaymentLate() {
   return (
     <ContainerPayment>
       <Card title="Cobranças Vencidas ">R$: 53k</Card>
-
       <ContainerData>
         <p>Cliente</p>
-        <p>Id da Cob.</p>
+        <p>Id</p>
         <p>Valor</p>
       </ContainerData>
-
       {data.map((item, i) => (
         <CardData clients={item} key={i} />
       ))}

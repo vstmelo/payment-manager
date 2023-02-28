@@ -17,8 +17,5 @@ export const ContainerData = styled("div", {
   gridTemplateRows: "repeat(1, 2fr)",
   gap: "10px",
   marginTop: "20px",
-  '& p':{
-    alignSelf:'center',
-    justifySelf:'center',
-  }
+ 
 });

@@ -48,7 +48,7 @@ export function PaymentPaid() {
 
       <ContainerData>
         <p>Cliente</p>
-        <p>Id da Cob.</p>
+        <p>Id</p>
         <p>Valor</p>
       </ContainerData>
 
