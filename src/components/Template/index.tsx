@@ -8,7 +8,7 @@ const Template = (props: ITemplate) => {
   return (
     <ContainerTemplate>
       {currentPath === "/" ? (
-        <></>
+        props.children
       ) : (
         <>
           <div>
