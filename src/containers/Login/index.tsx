@@ -10,7 +10,9 @@ import {
   ContainerLogin,
   TitleLogin,
 } from "../../assets/styles/pages/Login";
+import { motion } from "framer-motion";
 import { InputStyled } from "../../assets/styles/components/input";
+import { BtnMotion } from "../../components/motions/btnMotion";
 export default function Login(): JSX.Element {
   const [userEmail, setUserEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
@@ -45,23 +47,24 @@ export default function Login(): JSX.Element {
               type="text"
               placeholder="Digite seu email"
               label="Email:"
-              size='medium'
+              size="medium"
               onChange={handleUserEmail}
-              
             />
           </BoxInput>
           <BoxInput>
             <InputStyled
               label="Senha:"
               placeholder="Digite sua senha"
-              size='medium'
+              size="medium"
               type="password"
               onChange={handlePass}
             />
           </BoxInput>
-          <ButtonLogin onClick={callLoginUsecase} type="submit">
-            Entrar
-          </ButtonLogin>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <ButtonLogin onClick={callLoginUsecase} type="submit">
+              Entrar
+            </ButtonLogin>
+          </motion.div>
         </BoxLogin>
       </ContainerLogin>
     </>
