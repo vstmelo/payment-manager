@@ -1,4 +1,3 @@
-import Input from "../../components/Input";
 import React, { useContext, useState } from "react";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
@@ -12,7 +11,6 @@ import {
 } from "../../assets/styles/pages/Login";
 import { motion } from "framer-motion";
 import { InputStyled } from "../../assets/styles/components/input";
-import { BtnMotion } from "../../components/motions/btnMotion";
 export default function Login(): JSX.Element {
   const [userEmail, setUserEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
