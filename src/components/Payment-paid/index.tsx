@@ -1,7 +1,12 @@
-import { ContainerPayment } from "../../assets/styles/components/payment";
-import { Card } from "../../components/Card";
+import { CardHeader } from "../../assets/styles/components/card";
+import {
+  ContainerData,
+  ContainerPayment,
+} from "../../assets/styles/components/payment";
 import { CardData } from "../../components/Card-data";
 import Header from "../../components/SideBar";
+import { Card } from "../Card";
+
 export function PaymentPaid() {
   const data = [
     {
@@ -10,7 +15,7 @@ export function PaymentPaid() {
       username: "Jose",
       value: 1000,
       date: "2021-10-10",
-      status: "Pago"
+      status: "Pago",
     },
     {
       id: 2,
@@ -18,7 +23,7 @@ export function PaymentPaid() {
       idBill: 135,
       value: 1000,
       date: "2021-10-10",
-      status: "Pago"
+      status: "Pago",
     },
     {
       id: 2,
@@ -26,7 +31,7 @@ export function PaymentPaid() {
       idBill: 135,
       value: 1000,
       date: "2021-10-10",
-      status: "Pago"
+      status: "Pago",
     },
     {
       id: 2,
@@ -34,28 +39,22 @@ export function PaymentPaid() {
       idBill: 135,
       value: 1000,
       date: "2021-10-10",
-      status: "Pago"
+      status: "Pago",
     },
-  ]
+  ];
   return (
-    <ContainerPayment >
-      <Card title="Cobranças Pagas " theme="blue" >
-        R$: 5k
-      </Card>
+    <ContainerPayment>
+      <Card title="Cobranças Pagas ">R$: 53k</Card>
 
-      <div>
+      <ContainerData>
         <p>Cliente</p>
         <p>Id da Cob.</p>
         <p>Valor</p>
-      </div>
-      <div>
-        {
-          data.map((item) => (
-            <CardData clients={item} />
-          ))
-        }
-      </div>
+      </ContainerData>
 
+      {data.map((item, i) => (
+        <CardData clients={item} key={i} />
+      ))}
     </ContainerPayment>
-  )
+  );
 }

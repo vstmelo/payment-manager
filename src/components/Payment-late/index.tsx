@@ -1,5 +1,7 @@
-import { Card } from "../../components/Card";
+import {  CardHeader } from "../../assets/styles/components/card";
+import { ContainerData, ContainerPayment } from "../../assets/styles/components/payment";
 import { CardData } from "../../components/Card-data";
+import { Card } from "../Card";
 
 export function PaymentLate() {
   const data = [
@@ -37,23 +39,18 @@ export function PaymentLate() {
     },
   ]
   return (
-    <>
-      <Card title="Cobranças Vencidas" theme="pink" >
-        R$: 5k
-      </Card>
-      <div >
+    <ContainerPayment>
+      <Card title="Cobranças Vencidas ">R$: 53k</Card>
+
+      <ContainerData>
         <p>Cliente</p>
         <p>Id da Cob.</p>
         <p>Valor</p>
-      </div>
-      <div>
-        {
-          data.map((item) => (
-            <CardData clients={item} />
-          ))
-        }
-      </div>
-    </>
+      </ContainerData>
 
-  )
+      {data.map((item, i) => (
+        <CardData clients={item} key={i} />
+      ))}
+    </ContainerPayment>
+  );
 }
