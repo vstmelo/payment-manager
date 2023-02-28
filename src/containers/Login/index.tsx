@@ -10,6 +10,7 @@ import {
   ContainerLogin,
   TitleLogin,
 } from "../../assets/styles/pages/Login";
+import { InputStyled } from "../../assets/styles/components/input";
 export default function Login(): JSX.Element {
   const [userEmail, setUserEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
@@ -40,19 +41,20 @@ export default function Login(): JSX.Element {
         <BoxLogin>
           <TitleLogin>Login</TitleLogin>
           <BoxInput>
-            <Input
+            <InputStyled
               type="text"
               placeholder="Digite seu email"
-              fullwidth="true"
               label="Email:"
+              size='medium'
               onChange={handleUserEmail}
+              
             />
           </BoxInput>
           <BoxInput>
-            <Input
+            <InputStyled
               label="Senha:"
               placeholder="Digite sua senha"
-              fullwidth="true"
+              size='medium'
               type="password"
               onChange={handlePass}
             />
